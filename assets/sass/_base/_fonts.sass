@@ -1,0 +1,28 @@
+// font-weight helper:
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+@mixin font($f-name, $f-style, $f-weight, $f-url)
+	@font-face
+		font-family: $f-name
+		font-style: $f-style
+		font-weight: $f-weight
+		src: url($f-url) format('woff2')
+		font-display: swap
+
+
+@include font('Avenir', normal, 400, '../fonts/Avenir-normal.woff')
+@include font('Avenir', normal, 500, '../fonts/Avenir-medium.woff')
+@include font('Avenir', normal, 800, '../fonts/Avenir-heavy.woff')
+@include font('Avenir', normal, 900, '../fonts/Avenir-black.woff')
+@include font('Lato', normal, 600, '../fonts/Lato-Semibold.woff2')
+@include font('Lato', normal, 700, '../fonts/Lato-Bold.woff2')
+@include font('ChangaOne', normal, 400, '../fonts/ChangaOne.woff2')
+@include font('Helvetica', normal, 400, '../fonts/HelveticaNeueCyr-normal.woff2')
+@include font('Montserrat', normal, 500, '../fonts/Montserrat-Medium.woff2')
+@include font('Damion', normal, 400, '../fonts/Damion.woff2')
